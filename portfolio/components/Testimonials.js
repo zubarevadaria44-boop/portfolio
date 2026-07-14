@@ -5,8 +5,8 @@ export default function Testimonials({ items }) {
         <figure className="testimonial-card" key={i}>
           <blockquote>&laquo;{t.text}&raquo;</blockquote>
           <figcaption>
-            <span className="t-name">{t.name}</span>
-            <span className="t-meta">{t.meta}</span>
+            {t.name && <span className="t-name">{t.name}</span>}
+            {t.meta && <span className="t-meta">{t.meta}</span>}
           </figcaption>
         </figure>
       ))}
