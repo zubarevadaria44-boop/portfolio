@@ -602,4 +602,167 @@ footer .fsocial a:hover { color: var(--rust); }
   .hero-visual { max-width: 100%; }
   .hero-visual .frame-sub { width: 50%; }
   .timeline-row { grid-template-columns: 70px 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .testimonials { grid-template-columns: 1fr; }
+}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+.testimonial-card {
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testimonial-card blockquote {
+  margin: 0;
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.testimonial-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+}
+.testimonial-card .t-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+.testimonial-card .t-meta {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- PRICING ---------- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+.pricing-card {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px var(--shadow);
+}
+.pricing-card.featured {
+  border-color: var(--rust);
+  background: var(--cream);
+}
+.pricing-badge {
+  position: absolute;
+  top: -13px;
+  left: 24px;
+  background: var(--rust);
+  color: var(--paper);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+.pricing-card h4 {
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.price-value {
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--rust-deep);
+}
+.price-unit {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.pricing-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pricing-list li {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  padding-left: 18px;
+  position: relative;
+}
+.pricing-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--rust);
+}
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-fraunces), serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.faq-item.open .faq-question { color: var(--rust-deep); }
+.faq-icon {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  color: var(--rust);
+}
+.faq-answer {
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+.faq-answer p {
+  margin: 0 4px 22px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 65ch;
 }

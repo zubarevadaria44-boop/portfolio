@@ -2,6 +2,74 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import ContactBlock from "@/components/ContactBlock";
+import Pricing from "@/components/Pricing";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+
+const pricingItems = [
+  {
+    title: "Портретная",
+    price: "от 2 500 ₽",
+    unit: "/ 1 час",
+    features: ["До 15 обработанных фото", "1 локация", "Готовые фото за 2-3 дня"],
+  },
+  {
+    title: "Студийная",
+    price: "от 3 500 ₽",
+    unit: "/ 1.5 часа",
+    features: ["Аренда студии включена", "До 20 обработанных фото", "Смена образа"],
+    featured: true,
+  },
+  {
+    title: "Уличная",
+    price: "от 3 000 ₽",
+    unit: "/ 1.5 часа",
+    features: ["До 2 локаций", "До 20 обработанных фото", "Прогулочный формат"],
+  },
+  {
+    title: "Предметная",
+    price: "от 1 500 ₽",
+    unit: "/ 10 предметов",
+    features: ["Однородный фон", "Базовая ретушь", "Готово за 1-2 дня"],
+  },
+];
+
+const testimonialItems = [
+  {
+    text: "Дарья сняла нашу семейную прогулку так тепло и легко, что дочка даже не заметила камеру. Фото пересматриваем до сих пор.",
+    name: "Анна",
+    meta: "семейная съёмка",
+  },
+  {
+    text: "Нужны были фото украшений для магазина — получила аккуратные, чистые кадры без лишних танцев с бубном. Быстро и по делу.",
+    name: "Марина",
+    meta: "предметная съёмка",
+  },
+  {
+    text: "Боялась камеры, но с Дашей было легко и весело. Портреты получились живыми, без неловких поз.",
+    name: "Ксения",
+    meta: "портретная съёмка",
+  },
+];
+
+const faqItems = [
+  {
+    q: "Сколько фото я получу?",
+    a: "Зависит от формата: обычно 15-20 обработанных кадров с полуторачасовой съёмки. Все исходники не отдаю — только лучшие моменты, аккуратно обработанные.",
+  },
+  {
+    q: "Как проходит выбор кадров?",
+    a: "После съёмки присылаю все более-менее удачные фото одним альбомом — вы отмечаете понравившиеся, я довожу их до финального вида.",
+  },
+  {
+    q: "Работаете за городом или в поездках?",
+    a: "Да, при обсуждении локации просто напишите, если это не в пределах города — обсудим отдельно дорогу и время.",
+  },
+  {
+    q: "Можно снять в пасмурную погоду или дома?",
+    a: "Конечно — мобильная камера отлично работает и при рассеянном свете. Если съёмка на улице, просто ориентируемся по прогнозу и при необходимости переносим дату.",
+  },
+];
 
 export const metadata = {
   title: "Обо мне — Smaige_go",
@@ -125,6 +193,49 @@ export default function About() {
                 </p>
               </div>
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="pricing">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <span className="kicker">Стоимость</span>
+              <h2>Цены на съёмку</h2>
+            </div>
+            <p>Финальная цена зависит от локации и пожеланий — обсудим при созвоне.</p>
+          </Reveal>
+          <Reveal>
+            <Pricing items={pricingItems} />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="testimonials-section">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <span className="kicker">Отзывы</span>
+              <h2>Что говорят клиенты</h2>
+            </div>
+          </Reveal>
+          <Reveal>
+            <Testimonials items={testimonialItems} />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="faq-section">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <div>
+              <span className="kicker">Частые вопросы</span>
+              <h2>FAQ</h2>
+            </div>
+          </Reveal>
+          <Reveal>
+            <FAQ items={faqItems} />
           </Reveal>
         </div>
       </section>

@@ -17,6 +17,13 @@ export default function ContactBlock({
       </div>
       <div>
         <div className="contact-list">
+          <a className="contact-item" href="https://instagram.com/smaige_go" target="_blank" rel="noreferrer">
+            <span className="ico">◎</span>
+            <span className="meta">
+              <span className="label">Instagram</span>
+              <span className="value">@smaige_go</span>
+            </span>
+          </a>
           <a className="contact-item" href="https://t.me/byDaria163" target="_blank" rel="noreferrer">
             <span className="ico">✈</span>
             <span className="meta">
