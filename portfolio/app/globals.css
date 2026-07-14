@@ -517,7 +517,7 @@ section { padding: 6vw 0; }
   background: var(--rust);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  font-size: 1rem;
+  color: var(--paper);
 }
 .contact-item .meta { display: flex; flex-direction: column; }
 .contact-item .label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #a99d8c; }
@@ -602,6 +602,11 @@ footer .fsocial a:hover { color: var(--rust); }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
 /* ---------- RESPONSIVE ---------- */
+@media (min-width: 901px) {
+  .portfolio-hero { padding-bottom: 2vw; }
+  .portfolio-gallery { padding-top: 1vw; }
+}
+
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-visual { margin-top: 3rem; max-width: 70%; }
