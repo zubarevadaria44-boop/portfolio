@@ -3,10 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useLanguage } from "@/components/LanguageProvider";
+import translations from "@/lib/translations";
 
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { lang, setLang } = useLanguage();
+  const t = translations[lang].nav;
 
   const linkClass = (href) => (pathname === href ? "active" : "");
 
@@ -20,17 +24,26 @@ export default function Header() {
 
         <nav className={`main-nav ${open ? "open" : ""}`}>
           <Link href="/" className={linkClass("/")} onClick={() => setOpen(false)}>
-            Главная
+            {t.home}
           </Link>
           <Link href="/about" className={linkClass("/about")} onClick={() => setOpen(false)}>
-            Обо мне
+            {t.about}
           </Link>
           <Link href="/portfolio" className={linkClass("/portfolio")} onClick={() => setOpen(false)}>
-            Портфолио
+            {t.portfolio}
           </Link>
+          <div className="lang-switch">
+            <button className={lang === "ru" ? "active" : ""} onClick={() => setLang("ru")}>
+              RU
+            </button>
+            <span className="lang-divider">/</span>
+            <button className={lang === "en" ? "active" : ""} onClick={() => setLang("en")}>
+              EN
+            </button>
+          </div>
         </nav>
 
-        <button className="nav-toggle" aria-label="Меню" onClick={() => setOpen(!open)}>
+        <button className="nav-toggle" aria-label="Menu" onClick={() => setOpen(!open)}>
           <span></span>
           <span></span>
           <span></span>
@@ -39,3 +52,4 @@ export default function Header() {
     </header>
   );
 }
+

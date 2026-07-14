@@ -1,5 +1,6 @@
 import { Fraunces, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru" className={`${fraunces.variable} ${manrope.variable}`}>
       <body>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
         <Analytics />
       </body>
     </html>

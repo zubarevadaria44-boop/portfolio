@@ -1,9 +1,17 @@
+"use client";
+
+import { useLanguage } from "@/components/LanguageProvider";
+import translations from "@/lib/translations";
+
 export default function Footer() {
+  const { lang } = useLanguage();
+  const t = translations[lang].footer;
+
   return (
     <footer>
       <div className="wrap">
         <span className="fmark">Smaige_go</span>
-        <span className="fmeta">© 2026 · мобильная фотография</span>
+        <span className="fmeta">{t.copyright}</span>
         <div className="fsocial">
           <a href="https://instagram.com/smaige_go" target="_blank" rel="noreferrer">
             Instagram
@@ -17,3 +25,4 @@ export default function Footer() {
     </footer>
   );
 }
+
