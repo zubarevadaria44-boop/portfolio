@@ -221,6 +221,7 @@ nav.main-nav a:hover::after { width: 100%; }
   position: relative;
 }
 .hero-visual .frame-main {
+  width: 100%;
   border-radius: 4px;
   box-shadow: 0 30px 60px -20px var(--shadow);
   transform: rotate(1.5deg);
@@ -380,10 +381,6 @@ section { padding: 6vw 0; }
 
 /* ---------- ABOUT PAGE ---------- */
 .about-hero {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 5vw;
-  align-items: center;
   padding: 6vw 0;
 }
 .about-hero-grid {
@@ -405,26 +402,6 @@ section { padding: 6vw 0; }
   height: 100%;
   object-fit: cover;
   display: block;
-}
-.about-hero .portrait {
-  position: relative;
-}
-.about-hero .portrait img {
-  border-radius: 4px;
-  box-shadow: 0 30px 60px -20px var(--shadow);
-}
-.about-hero .portrait .tag {
-  position: absolute;
-  bottom: -24px;
-  right: -20px;
-  background: var(--rust);
-  color: var(--paper);
-  padding: 14px 22px;
-  border-radius: 4px;
-  font-family: var(--font-fraunces), serif;
-  font-style: italic;
-  font-size: 0.95rem;
-  box-shadow: 0 15px 30px -10px var(--shadow);
 }
 
 .about-hero h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 24px; }
@@ -601,10 +578,8 @@ footer .fsocial a:hover { color: var(--rust); }
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-visual { margin-top: 3rem; max-width: 70%; }
-  .about-hero { grid-template-columns: 1fr; }
   .about-hero-grid { grid-template-columns: 1fr; }
   .about-photo { min-height: 320px; margin-top: 2rem; }
-  .about-hero .portrait { max-width: 60%; }
   .contact-block { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .gallery .span-2, .gallery .span-3, .gallery .span-4 { grid-column: span 2; }

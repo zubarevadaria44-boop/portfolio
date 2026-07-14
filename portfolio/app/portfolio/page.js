@@ -128,6 +128,13 @@ const items = [
     className: "span-3 wide",
   },
   {
+    src: "/images/nature-lake.jpg",
+    alt: "Вечерний пейзаж с рекой и холмами",
+    caption: "Природа",
+    category: ["nature"],
+    className: "span-3 wide",
+  },
+  {
     src: "/images/portrait-bw-doorway.jpg",
     alt: "Чёрно-белый портрет в дверном проёме",
     caption: "Портретная съёмка",
