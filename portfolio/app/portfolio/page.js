@@ -17,7 +17,6 @@ const filters = [
   { value: "street", label: "Уличная" },
   { value: "family", label: "Семейная" },
   { value: "pets", label: "Питомцы" },
-  { value: "nature", label: "Природа" },
   { value: "product", label: "Предметная" },
 ];
 
@@ -125,13 +124,6 @@ const items = [
     alt: "Три кошки на старой лестнице в зелени",
     caption: "Питомцы",
     category: ["pets"],
-    className: "span-3 wide",
-  },
-  {
-    src: "/images/nature-lake.jpg",
-    alt: "Вечерний пейзаж с рекой и холмами",
-    caption: "Природа",
-    category: ["nature"],
     className: "span-3 wide",
   },
   {
